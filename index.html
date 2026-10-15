@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Jim's Piano Studio - Alfred Lesson Books</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#FFD93D">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sunny:#FFD93D;--coral:#FF6B6B;--sky:#6BCB77;--lav:#9D84B7;--cream:#FFF8E7;--ink:#2D2A26;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink)}
+.bubbly{font-family:'Fredoka',sans-serif}
+.thick{border:3.5px solid var(--ink)}
+.hero{background:var(--sunny);border-bottom:4px solid var(--ink);position:relative;overflow:hidden;padding:40px 20px;text-align:center}
+.card{background:var(--white);border:3.5px solid var(--ink);border-radius:24px;overflow:hidden;box-shadow:8px 8px 0 var(--ink);transition:transform .2s}
+.card:hover{transform:translate(-2px,-2px) rotate(-0.5deg)}
+.playlist{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;border-bottom:3.5px solid var(--ink)}
+.playlist iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;border:3px solid var(--ink);font-weight:800;font-size:12px;background:var(--white)}
+.btn{border:3px solid var(--ink);border-radius:999px;padding:10px 18px;font-weight:900;cursor:pointer;background:var(--white);box-shadow:4px 4px 0 var(--ink)}
+.btn.active{background:var(--ink);color:var(--white)}
+details{border:3px solid var(--ink);border-radius:16px;padding:12px;background:var(--cream);margin-top:12px}
+summary{font-weight:900;cursor:pointer}
+.counter{background:var(--ink);color:var(--white);border-radius:999px;padding:10px 18px;font-weight:900;display:inline-flex;gap:8px;align-items:center;box-shadow:4px 4px 0 var(--sunny)}
+.float-note{position:absolute;animation:float 8s linear infinite}
+@keyframes float{0%{transform:translateY(100vh) rotate(0)}100%{transform:translateY(-100px) rotate(360deg)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;max-width:1200px;margin:0 auto;padding:20px}
+nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:3.5px solid var(--ink);display:flex;gap:10px;justify-content:center;padding:12px;flex-wrap:wrap}
+.tools{background:var(--white);border:3.5px solid var(--ink);border-radius:24px;padding:20px;box-shadow:6px 6px 0 var(--ink)}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div style="position:absolute;inset:0;opacity:.15;background-image:radial-gradient(circle at 2px 2px, var(--ink) 2px, transparent 0);background-size:28px 28px"></div>
+  <span class="float-note" style="left:10%;animation-delay:0s">🎵</span>
+  <span class="float-note" style="left:30%;animation-delay:1s">🎶</span>
+  <span class="float-note" style="left:60%;animation-delay:2s">⭐</span>
+  <span class="float-note" style="left:80%;animation-delay:0.5s">🌈</span>
+  <h1 class="bubbly" style="font-size:52px;line-height:1;position:relative">🎹 Mr. Jim's Piano Studio</h1>
+  <p class="bubbly" style="font-size:20px;margin-top:10px;position:relative">Learn, play, and sparkle! ✨ Alfred 1A–5 | 25 Students Strong</p>
+  <div style="margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative">
+    <div id="visitor-counter" class="counter">🎹 Visitors: <span id="hits">... </span> • <span id="today">today</span></div>
+    <span class="badge" style="background:var(--sky)">1981 Edition • Correct Playlists</span>
+  </div>
+</div>
+
+<nav>
+  <button class="btn active" onclick="showTab('books')">📚 Lesson Books</button>
+  <button class="btn" onclick="showTab('tools')">🛠️ Student Tools</button>
+  <button class="btn" onclick="showTab('log')">📝 Practice Log</button>
+  <div style="margin-left:auto;display:flex;gap:8px">
+    <button class="btn" onclick="setLang('en')" id="btn-en">English</button>
+    <button class="btn" onclick="setLang('karen')" id="btn-karen">S'gaw Karen</button>
+  </div>
+</nav>
+
+<div id="books" style="padding:30px 16px">
+  <h2 class="bubbly" style="text-align:center;font-size:38px;margin-bottom:10px">Let's Make Music Magic!</h2>
+  <p style="text-align:center;font-weight:700;opacity:.7;margin-bottom:24px">Follow along with your 1981 Alfred book. No confusing lists — just press play and follow the videos in order!</p>
+  <div class="grid">
+    <!-- Book 1A -->
+    <div class="card">
+      <div style="background:var(--coral);padding:16px;text-align:center;border-bottom:3.5px solid var(--ink)">
+        <div class="badge">Level 1A</div>
+        <h3 class="bubbly" style="font-size:22px;margin-top:6px">🌟 Beginning Basics</h3>
+      </div>
+      <div class="playlist"><iframe src="https://www.youtube-nocookie.com/embed/rG1SumLbgJM" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div style="padding:14px">
+        <div class="badge" style="background:var(--cream)">Follow the videos in order - matches your 1981 Alfred book!</div>
+        <details><summary>View 1981 Book Contents (41 songs)</summary><div style="font-size:13px;line-height:1.6;margin-top:8px">
+1 Right & Left, 2 Left & Right, 3 Merrily We Roll Along/O'er the Deep Blue Sea, 4 Hand-Bells, 5 Jolly Old Saint Nicholas, 6 Old MacDonald, 7 Batter Up!, 8 My Clever Pup, 9 The Zoo, 10 Playing in a New Position, 11 Sailing, 12 Skating, 13 Wishing Well, 14 Rain, Rain!, 15 A Happy Song, 16 Position C, 17 A Happy Song (reprise), 18 See-Saws, 19 Just a Second!, 20 Balloons, 21 Who's on Third?, 22 Mexican Hat Dance, 23 Rock Song, 24 Rockets, 25 Sea Divers, 26 Play a Fourth, 27 July the Fourth!, 28 Old Uncle Bill, 29 Love Somebody, 30 My Fifth, 31 The Donkey, 32 Position G, 33 Jingle Bells!, 34 Willie & Tillie, 35 A Friend Like You, 36 My Robot, 37 Rockin' Tune, 38 Indian Song, 39 Raindrops, 40 It's Halloween!, 41 Horse Sense
+        </div></details>
+      </div>
+    </div>
+    <!-- Book 1B -->
+    <div class="card">
+      <div style="background:var(--sky);padding:16px;text-align:center;border-bottom:3.5px solid var(--ink)">
+        <div class="badge">Level 1B</div>
+        <h3 class="bubbly" style="font-size:22px;margin-top:6px">🌱 Building Foundations</h3>
+      </div>
+      <div class="playlist"><iframe src="https://www.youtube-nocookie.com/embed/g_lNu2H0IBA" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div style="padding:14px">
+        <div class="badge" style="background:var(--cream)">Follow the videos in order - matches your 1981 Alfred book!</div>
+        <details><summary>View 1981 Book Contents (38 songs)</summary><div style="font-size:13px;line-height:1.6;margin-top:8px">
+1 Step Right Up!, 2 The Carousel, 3 Hail to Thee, America!, 4 Brother John, 5 Good Sounds, 6 The Cuckoo, 7 Money Can't Buy Ev'rything!, 8 Ping-Pong, 9 Grandpa's Clock, 10 When the Saints Go Marching In, 11 G's in the "BAG", 12 Join the Fun, 13 Oom-Pa-pa!, 14 The Clown, 15 Thumbs on C!, 16 Waltz Time, 17 Good King Wenceslas, 18 The Rainbow, 19 Yankee Doodle, 20 The Windmill, 21 Indians, 22 New Position G, 23 Pedal Play, 24 Harp Song, 25 Concert Time, 26 Music Box Rock, 27 A Cowboy's Song, 28 The Magic Man, 29 The Greatest Show on Earth!, 30 The Whirlwind, 31 The Planets, 32 C Major Scale Piece, 33 G Major Scale Piece, 34 Carol in G Major, 35 The Same Carol in C Major, 36 French Lullaby, 37 Sonatina, 38 When Our Band Goes Marching By!
+        </div></details>
+      </div>
+    </div>
+    <!-- Book 2 -->
+    <div class="card">
+      <div style="background:var(--sunny);padding:16px;text-align:center;border-bottom:3.5px solid var(--ink)">
+        <div class="badge">Level 2</div>
+        <h3 class="bubbly" style="font-size:22px;margin-top:6px">🚀 Expanding Skills</h3>
+      </div>
+      <div class="playlist"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLwooLmMfofqQbpgTKeedFbZsRqqg27IcJ" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div style="padding:14px"><div class="badge" style="background:var(--cream)">Playlist order = book order • No fake titles</div></div>
+    </div>
+    <!-- Book 3 -->
+    <div class="card">
+      <div style="background:var(--lav);padding:16px;text-align:center;border-bottom:3.5px solid var(--ink);color:white">
+        <div class="badge">Level 3</div>
+        <h3 class="bubbly" style="font-size:22px;margin-top:6px">🎨 Intermediate Studies</h3>
+      </div>
+      <div class="playlist"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLmyKOTtljvJ7WwRG6q__GQCXmPvjLn1fm" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div style="padding:14px"><div class="badge" style="background:var(--cream)">Playlist order = book order</div></div>
+    </div>
+    <!-- Book 4 -->
+    <div class="card">
+      <div style="background:var(--coral);padding:16px;text-align:center;border-bottom:3.5px solid var(--ink)">
+        <div class="badge">Level 4</div>
+        <h3 class="bubbly" style="font-size:22px;margin-top:6px">🎸 Advanced Techniques</h3>
+      </div>
+      <div class="playlist"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLeW-cELRAmSlDxHu7em5XFaB-pOlWiPaV" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div style="padding:14px"><div class="badge" style="background:var(--cream)">Playlist order = book order</div></div>
+    </div>
+    <!-- Book 5 -->
+    <div class="card">
+      <div style="background:var(--sky);padding:16px;text-align:center;border-bottom:3.5px solid var(--ink)">
+        <div class="badge">Level 5</div>
+        <h3 class="bubbly" style="font-size:22px;margin-top:6px">👑 Master Level</h3>
+      </div>
+      <div class="playlist"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL7ucElDiXf1T2U8YFNg0eel7mVoh-6xXu" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+      <div style="padding:14px"><div class="badge" style="background:var(--cream)">Playlist order = book order</div></div>
+    </div>
+  </div>
+</div>
+
+<div id="tools" style="display:none;padding:30px 16px;max-width:1200px;margin:0 auto">
+  <div class="tools" style="text-align:center;margin-bottom:20px">
+    <h2 class="bubbly" style="font-size:28px">🪄 Magic Metronome</h2>
+    <div id="bpm-display" style="font-size:64px;font-weight:900;color:var(--coral)">100</div>
+    <input type="range" id="bpm-slider" min="40" max="208" value="100" style="width:260px" oninput="document.getElementById('bpm-display').textContent=this.value">
+    <div style="margin-top:12px"><button class="btn" onclick="toggleMetro()" id="metro-btn">▶ Play</button></div>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+    <div class="tools"><div style="font-size:28px">🎼</div><h3>MusicTheory.net</h3><p style="font-size:13px">Interactive note reading</p><a class="btn" href="https://www.musictheory.net" target="_blank">Visit →</a></div>
+    <div class="tools"><div style="font-size:28px">🎹</div><h3>Virtual Piano</h3><p style="font-size:13px">Practice away from piano</p><a class="btn" href="https://virtualpiano.net" target="_blank">Visit →</a></div>
+    <div class="tools"><div style="font-size:28px">🎧</div><h3>Slow Down</h3><p style="font-size:13px">YouTube playback speed</p><a class="btn" href="https://www.youtube.com" target="_blank">YouTube →</a></div>
+  </div>
+</div>
+
+<div id="log" style="display:none;padding:30px 16px;max-width:800px;margin:0 auto">
+  <div class="tools">
+    <h2 class="bubbly" style="font-size:28px;text-align:center">📝 My Practice Log</h2>
+    <div style="display:grid;gap:10px;margin-top:16px">
+      <input id="student" placeholder="Your Name" style="padding:12px;border:3px solid var(--ink);border-radius:12px;font-weight:700">
+      <select id="bookSel" style="padding:12px;border:3px solid var(--ink);border-radius:12px;font-weight:700">
+        <option>Book 1A</option><option>Book 1B</option><option>Book 2</option><option>Book 3</option><option>Book 4</option><option>Book 5</option>
+      </select>
+      <input id="mins" type="number" placeholder="Minutes" style="padding:12px;border:3px solid var(--ink);border-radius:12px;font-weight:700">
+      <input id="notes" placeholder="What did you play?" style="padding:12px;border:3px solid var(--ink);border-radius:12px;font-weight:700">
+      <button class="btn" style="background:var(--coral);color:white" onclick="addLog()">➕ Add to my log!</button>
+    </div>
+    <div id="logEntries" style="margin-top:16px"></div>
+  </div>
+</div>
+
+<footer style="border-top:4px solid var(--ink);background:white;padding:20px;text-align:center;margin-top:30px">
+  <div class="bubbly" style="font-weight:800">Mr. Jim's Piano Studio • 1981 Alfred Basic Library • Made with 💛 for kids</div>
+  <div style="margin-top:10px"><span id="footer-counter" class="counter">🎹 Total sparkles: <span id="hits2">...</span></span></div>
+</footer>
+
+<script>
+// Tabs
+function showTab(id){
+  document.getElementById('books').style.display = id==='books' ? 'block':'none';
+  document.getElementById('tools').style.display = id==='tools' ? 'block':'none';
+  document.getElementById('log').style.display = id==='log' ? 'block':'none';
+  document.querySelectorAll('nav .btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+function setLang(l){
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('btn-karen').classList.toggle('active', l==='karen');
+}
+
+// Metronome simple
+let metroInt, playing=false, ctx;
+function toggleMetro(){
+  const btn=document.getElementById('metro-btn');
+  if(playing){clearInterval(metroInt);playing=false;btn.textContent='▶ Play';return}
+  if(!ctx) ctx=new (window.AudioContext||window.webkitAudioContext)();
+  const bpm=()=>parseInt(document.getElementById('bpm-slider').value);
+  function tick(){
+    const o=ctx.createOscillator(), g=ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.frequency.value=1000; g.gain.setValueAtTime(0.5, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime+0.05);
+    o.start(); o.stop(ctx.currentTime+0.05);
+  }
+  tick();
+  metroInt=setInterval(tick, 60000/bpm());
+  playing=true; btn.textContent='⏸ Pause';
+}
+
+// Practice log local
+let logs=JSON.parse(localStorage.getItem('piano-logs')||'[]');
+function renderLogs(){
+  const c=document.getElementById('logEntries');
+  c.innerHTML=logs.slice().reverse().map(l=>`<div style="border:3px solid var(--ink);border-radius:12px;padding:10px;margin-bottom:8px;background:var(--cream)"><b>${l.name}</b> - ${l.book} • ${l.mins} min<br><small>${l.notes}</small> <small style="opacity:.6">${l.date}</small></div>`).join('');
+}
+function addLog(){
+  const name=document.getElementById('student').value, book=document.getElementById('bookSel').value, mins=document.getElementById('mins').value, notes=document.getElementById('notes').value;
+  if(!name||!mins) return alert('Name + minutes please!');
+  logs.push({name,book,mins,notes,date:new Date().toLocaleDateString()});
+  localStorage.setItem('piano-logs', JSON.stringify(logs));
+  renderLogs();
+  document.getElementById('student').value='';document.getElementById('mins').value='';document.getElementById('notes').value='';
+}
+renderLogs();
+
+// Counter - tries Cloudflare Worker first, falls back to localStorage count
+async function initCounter(){
+  const localCountKey='piano-hits';
+  let local=parseInt(localStorage.getItem(localCountKey)||'0')+1;
+  localStorage.setItem(localCountKey, local);
+  const todayStr=new Date().toLocaleDateString();
+  
+  // Try to fetch from Cloudflare Worker if you set the URL below
+  const WORKER_URL = ''; // <-- PUT YOUR WORKER URL HERE e.g. https://hit-counter.yourname.workers.dev
+  let total=local;
+  if(WORKER_URL){
+    try{
+      const r=await fetch(WORKER_URL);
+      const j=await r.json();
+      total=j.hits;
+    }catch(e){ /* fallback to local */ }
+  }
+  document.getElementById('hits').textContent=total;
+  document.getElementById('hits2').textContent=total;
+  document.getElementById('today').textContent='✨ '+todayStr;
+}
+initCounter();
+
+// Cloudflare Web Analytics - will work automatically once you enable it in Cloudflare dashboard
+</script>
+
+<!-- CLOUDFLARE WEB ANALYTICS PLACEHOLDER - Replace TOKEN with your token from Cloudflare dashboard -->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script> -->
+
+</body>
+</html>
